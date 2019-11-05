@@ -113,6 +113,13 @@
         Else
             TBresult3.Text = "Do Not Cut"
         End If
+
+        RBa.Checked = False
+        RBb.Checked = False
+        RBc.Checked = False
+        Bred.Enabled = False
+        Bblack.Enabled = False
+        Bblue.Enabled = False
     End Sub
 
     Private Sub Bblue_Click(sender As Object, e As EventArgs) Handles Bblue.Click
@@ -131,6 +138,13 @@
         Else
             TBresult3.Text = "Do Not Cut"
         End If
+
+        RBa.Checked = False
+        RBb.Checked = False
+        RBc.Checked = False
+        Bred.Enabled = False
+        Bblack.Enabled = False
+        Bblue.Enabled = False
     End Sub
 
     Private Sub Bblack_Click(sender As Object, e As EventArgs) Handles Bblack.Click
@@ -148,6 +162,21 @@
             TBresult3.Text = "Cut"
         Else
             TBresult3.Text = "Do Not Cut"
+        End If
+
+        RBa.Checked = False
+        RBb.Checked = False
+        RBc.Checked = False
+        Bred.Enabled = False
+        Bblack.Enabled = False
+        Bblue.Enabled = False
+    End Sub
+
+    Private Sub RB_CheckedChanged(sender As Object, e As EventArgs) Handles RBa.CheckedChanged, RBb.CheckedChanged, RBc.CheckedChanged
+        If (RBa.Checked Or RBb.Checked Or RBc.Checked) Then
+            Bred.Enabled = True
+            Bblue.Enabled = True
+            Bblack.Enabled = True
         End If
     End Sub
 
@@ -191,6 +220,13 @@
 
     Private Sub Breset_Click(sender As Object, e As EventArgs) Handles Breset.Click
         seqWire.reset()
+        RBa.Checked = False
+        RBb.Checked = False
+        RBc.Checked = False
+        Bred.Enabled = False
+        Bblack.Enabled = False
+        Bblue.Enabled = False
+        TBresult3.Text = ""
     End Sub
 
     Private Sub TBnum_TextChanged(sender As Object, e As EventArgs) Handles TBnum.TextChanged
@@ -318,6 +354,13 @@
                 Next
             End If
         End If
+    End Sub
+
+    Private Sub BresetPass_Click(sender As Object, e As EventArgs) Handles BresetPass.Click
+        TBline1.Text = ""
+        TBline2.Text = ""
+        TBline3.Text = ""
+        TBresult4.Text = ""
     End Sub
 
     Private Sub Bok_Click(sender As Object, e As EventArgs) Handles Bok.Click

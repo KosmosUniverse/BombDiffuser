@@ -108,6 +108,7 @@ Partial Class Form1
         Me.Lblres3 = New System.Windows.Forms.Label()
         Me.TBresult3 = New System.Windows.Forms.TextBox()
         Me.GBpass = New System.Windows.Forms.GroupBox()
+        Me.BresetPass = New System.Windows.Forms.Button()
         Me.Lblres4 = New System.Windows.Forms.Label()
         Me.TBline3 = New System.Windows.Forms.TextBox()
         Me.TBresult4 = New System.Windows.Forms.TextBox()
@@ -117,6 +118,7 @@ Partial Class Form1
         Me.Lblline1 = New System.Windows.Forms.Label()
         Me.TBline1 = New System.Windows.Forms.TextBox()
         Me.GBmorse = New System.Windows.Forms.GroupBox()
+        Me.BresetMors = New System.Windows.Forms.Button()
         Me.Bok3 = New System.Windows.Forms.Button()
         Me.Bok2 = New System.Windows.Forms.Button()
         Me.Bok = New System.Windows.Forms.Button()
@@ -187,7 +189,6 @@ Partial Class Form1
         Me.PB8 = New System.Windows.Forms.PictureBox()
         Me.PB9 = New System.Windows.Forms.PictureBox()
         Me.PB1 = New System.Windows.Forms.PictureBox()
-        Me.BresetMors = New System.Windows.Forms.Button()
         Me.GBgen.SuspendLayout()
         Me.GBbut.SuspendLayout()
         Me.GBhold.SuspendLayout()
@@ -1059,6 +1060,7 @@ Partial Class Form1
         '
         'Bblack
         '
+        Me.Bblack.Enabled = False
         Me.Bblack.Location = New System.Drawing.Point(104, 42)
         Me.Bblack.Name = "Bblack"
         Me.Bblack.Size = New System.Drawing.Size(43, 23)
@@ -1068,6 +1070,7 @@ Partial Class Form1
         '
         'Bblue
         '
+        Me.Bblue.Enabled = False
         Me.Bblue.Location = New System.Drawing.Point(55, 42)
         Me.Bblue.Name = "Bblue"
         Me.Bblue.Size = New System.Drawing.Size(43, 23)
@@ -1077,6 +1080,7 @@ Partial Class Form1
         '
         'Bred
         '
+        Me.Bred.Enabled = False
         Me.Bred.Location = New System.Drawing.Point(6, 42)
         Me.Bred.Name = "Bred"
         Me.Bred.Size = New System.Drawing.Size(43, 23)
@@ -1105,6 +1109,7 @@ Partial Class Form1
         'GBpass
         '
         Me.GBpass.BackColor = System.Drawing.Color.RoyalBlue
+        Me.GBpass.Controls.Add(Me.BresetPass)
         Me.GBpass.Controls.Add(Me.Lblres4)
         Me.GBpass.Controls.Add(Me.TBline3)
         Me.GBpass.Controls.Add(Me.TBresult4)
@@ -1120,6 +1125,15 @@ Partial Class Form1
         Me.GBpass.TabIndex = 5
         Me.GBpass.TabStop = False
         Me.GBpass.Text = "Password"
+        '
+        'BresetPass
+        '
+        Me.BresetPass.Location = New System.Drawing.Point(4, 111)
+        Me.BresetPass.Name = "BresetPass"
+        Me.BresetPass.Size = New System.Drawing.Size(52, 23)
+        Me.BresetPass.TabIndex = 17
+        Me.BresetPass.Text = "Reset"
+        Me.BresetPass.UseVisualStyleBackColor = True
         '
         'Lblres4
         '
@@ -1212,6 +1226,15 @@ Partial Class Form1
         Me.GBmorse.TabIndex = 13
         Me.GBmorse.TabStop = False
         Me.GBmorse.Text = "Morse"
+        '
+        'BresetMors
+        '
+        Me.BresetMors.Location = New System.Drawing.Point(6, 111)
+        Me.BresetMors.Name = "BresetMors"
+        Me.BresetMors.Size = New System.Drawing.Size(52, 23)
+        Me.BresetMors.TabIndex = 16
+        Me.BresetMors.Text = "Reset"
+        Me.BresetMors.UseVisualStyleBackColor = True
         '
         'Bok3
         '
@@ -1962,15 +1985,6 @@ Partial Class Form1
         Me.PB1.TabIndex = 0
         Me.PB1.TabStop = False
         '
-        'BresetMors
-        '
-        Me.BresetMors.Location = New System.Drawing.Point(6, 111)
-        Me.BresetMors.Name = "BresetMors"
-        Me.BresetMors.Size = New System.Drawing.Size(52, 23)
-        Me.BresetMors.TabIndex = 16
-        Me.BresetMors.Text = "Reset"
-        Me.BresetMors.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2231,4 +2245,5 @@ Partial Class Form1
     Friend WithEvents PBres2 As PictureBox
     Friend WithEvents GBresult As GroupBox
     Friend WithEvents BresetMors As Button
+    Friend WithEvents BresetPass As Button
 End Class
