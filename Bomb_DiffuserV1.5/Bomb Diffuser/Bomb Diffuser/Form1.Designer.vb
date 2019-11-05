@@ -131,11 +131,11 @@ Partial Class Form1
         Me.GBword = New System.Windows.Forms.GroupBox()
         Me.LblWord = New System.Windows.Forms.Label()
         Me.TBresult8 = New System.Windows.Forms.TextBox()
+        Me.Bsearch1 = New System.Windows.Forms.Button()
+        Me.TBinput = New System.Windows.Forms.TextBox()
+        Me.Lblinput = New System.Windows.Forms.Label()
         Me.Bsearch2 = New System.Windows.Forms.Button()
         Me.TBinput2 = New System.Windows.Forms.TextBox()
-        Me.Lblinput = New System.Windows.Forms.Label()
-        Me.Bsearch = New System.Windows.Forms.Button()
-        Me.TBinput = New System.Windows.Forms.TextBox()
         Me.TBlist = New System.Windows.Forms.TextBox()
         Me.GBhoriz = New System.Windows.Forms.GroupBox()
         Me.Lblres7 = New System.Windows.Forms.Label()
@@ -1314,11 +1314,11 @@ Partial Class Form1
         Me.GBword.BackColor = System.Drawing.Color.LightPink
         Me.GBword.Controls.Add(Me.LblWord)
         Me.GBword.Controls.Add(Me.TBresult8)
+        Me.GBword.Controls.Add(Me.Bsearch1)
+        Me.GBword.Controls.Add(Me.TBinput)
+        Me.GBword.Controls.Add(Me.Lblinput)
         Me.GBword.Controls.Add(Me.Bsearch2)
         Me.GBword.Controls.Add(Me.TBinput2)
-        Me.GBword.Controls.Add(Me.Lblinput)
-        Me.GBword.Controls.Add(Me.Bsearch)
-        Me.GBword.Controls.Add(Me.TBinput)
         Me.GBword.Controls.Add(Me.TBlist)
         Me.GBword.Enabled = False
         Me.GBword.Location = New System.Drawing.Point(572, 12)
@@ -1346,21 +1346,21 @@ Partial Class Form1
         Me.TBresult8.Size = New System.Drawing.Size(118, 20)
         Me.TBresult8.TabIndex = 20
         '
-        'Bsearch2
+        'Bsearch1
         '
-        Me.Bsearch2.Location = New System.Drawing.Point(9, 61)
-        Me.Bsearch2.Name = "Bsearch2"
-        Me.Bsearch2.Size = New System.Drawing.Size(118, 23)
-        Me.Bsearch2.TabIndex = 19
-        Me.Bsearch2.Text = "Search"
-        Me.Bsearch2.UseVisualStyleBackColor = True
+        Me.Bsearch1.Location = New System.Drawing.Point(9, 61)
+        Me.Bsearch1.Name = "Bsearch1"
+        Me.Bsearch1.Size = New System.Drawing.Size(118, 23)
+        Me.Bsearch1.TabIndex = 19
+        Me.Bsearch1.Text = "Search"
+        Me.Bsearch1.UseVisualStyleBackColor = True
         '
-        'TBinput2
+        'TBinput
         '
-        Me.TBinput2.Location = New System.Drawing.Point(9, 35)
-        Me.TBinput2.Name = "TBinput2"
-        Me.TBinput2.Size = New System.Drawing.Size(118, 20)
-        Me.TBinput2.TabIndex = 18
+        Me.TBinput.Location = New System.Drawing.Point(9, 35)
+        Me.TBinput.Name = "TBinput"
+        Me.TBinput.Size = New System.Drawing.Size(118, 20)
+        Me.TBinput.TabIndex = 18
         '
         'Lblinput
         '
@@ -1371,21 +1371,21 @@ Partial Class Form1
         Me.Lblinput.TabIndex = 17
         Me.Lblinput.Text = "Input Word"
         '
-        'Bsearch
+        'Bsearch2
         '
-        Me.Bsearch.Location = New System.Drawing.Point(9, 156)
-        Me.Bsearch.Name = "Bsearch"
-        Me.Bsearch.Size = New System.Drawing.Size(118, 23)
-        Me.Bsearch.TabIndex = 16
-        Me.Bsearch.Text = "Search"
-        Me.Bsearch.UseVisualStyleBackColor = True
+        Me.Bsearch2.Location = New System.Drawing.Point(9, 156)
+        Me.Bsearch2.Name = "Bsearch2"
+        Me.Bsearch2.Size = New System.Drawing.Size(118, 23)
+        Me.Bsearch2.TabIndex = 16
+        Me.Bsearch2.Text = "Search"
+        Me.Bsearch2.UseVisualStyleBackColor = True
         '
-        'TBinput
+        'TBinput2
         '
-        Me.TBinput.Location = New System.Drawing.Point(9, 130)
-        Me.TBinput.Name = "TBinput"
-        Me.TBinput.Size = New System.Drawing.Size(118, 20)
-        Me.TBinput.TabIndex = 15
+        Me.TBinput2.Location = New System.Drawing.Point(9, 130)
+        Me.TBinput2.Name = "TBinput2"
+        Me.TBinput2.Size = New System.Drawing.Size(118, 20)
+        Me.TBinput2.TabIndex = 15
         '
         'TBlist
         '
@@ -2134,7 +2134,7 @@ Partial Class Form1
     Friend WithEvents Lblletter1 As Label
     Friend WithEvents TBletter1 As TextBox
     Friend WithEvents GBword As GroupBox
-    Friend WithEvents TBinput As TextBox
+    Friend WithEvents TBinput2 As TextBox
     Friend WithEvents TBlist As TextBox
     Friend WithEvents GBtext As GroupBox
     Friend WithEvents GBcolor As GroupBox
@@ -2144,7 +2144,7 @@ Partial Class Form1
     Friend WithEvents RBb As RadioButton
     Friend WithEvents RBa As RadioButton
     Friend WithEvents Lblinput As Label
-    Friend WithEvents Bsearch As Button
+    Friend WithEvents Bsearch2 As Button
     Friend WithEvents Breset As Button
     Friend WithEvents Breset2 As Button
     Friend WithEvents GBstage5 As GroupBox
@@ -2178,8 +2178,8 @@ Partial Class Form1
     Friend WithEvents LblStrike As Label
     Friend WithEvents Breset3 As Button
     Friend WithEvents TBresult7 As TextBox
-    Friend WithEvents Bsearch2 As Button
-    Friend WithEvents TBinput2 As TextBox
+    Friend WithEvents Bsearch1 As Button
+    Friend WithEvents TBinput As TextBox
     Friend WithEvents LblWord As Label
     Friend WithEvents TBresult8 As TextBox
     Friend WithEvents GBsymbol As GroupBox

@@ -76,24 +76,24 @@
     End Sub
 
     Public Function getPosition(word As String) As String
-        If (TL.Contains(word)) Then
+        If (TL.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
             Return "Top Left"
-        ElseIf (TR.Contains(word)) Then
+        ElseIf (TR.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
             Return "Top Right"
-        ElseIf (ML.Contains(word)) Then
+        ElseIf (ML.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
             Return "Middle Left"
-        ElseIf (MR.Contains(word)) Then
+        ElseIf (MR.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
             Return "Middle Right"
-        ElseIf (BL.Contains(word)) Then
+        ElseIf (BL.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
             Return "Bottom Left"
-        ElseIf (BR.Contains(word)) Then
+        ElseIf (BR.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
             Return "Bottom Right"
         Else
-            Return "No position found"
+            MsgBox("[ERROR]: The word you entered doesn't exist.", vbOKOnly + vbObjectError, "Error")
         End If
     End Function
 
     Public Function getList(word As String) As String
-        Return (dic(word))
+        Return (dic(word.ToLower))
     End Function
 End Class
