@@ -314,8 +314,7 @@
     End Sub
 
     Private Sub Bok_Click(sender As Object, e As EventArgs) Handles Bok.Click
-        If (mors.convert(TBletter1.Text) = "False") Then
-        Else
+        If Not (mors.convert(TBletter1.Text) = "False") Then
             lst2 = mors.getFirst(mors.convert(TBletter1.Text))
             If (lst2.Count() = 1) Then
                 TBresult5.Text = ""
@@ -333,9 +332,14 @@
         End If
     End Sub
 
+    Private Sub TBletter1_Enter(sender As Object, e As KeyEventArgs) Handles TBletter1.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            Bok.PerformClick()
+        End If
+    End Sub
+
     Private Sub Bok2_Click(sender As Object, e As EventArgs) Handles Bok2.Click
-        If (mors.convert(TBletter2.Text) = "False") Then
-        Else
+        If Not (mors.convert(TBletter2.Text) = "False") Then
             lst2 = mors.getNext(mors.convert(TBletter2.Text), lst2, 1)
             If (lst2.Count() = 1) Then
                 TBresult5.Text = ""
@@ -355,9 +359,14 @@
         End If
     End Sub
 
+    Private Sub TBletter2_Enter(sender As Object, e As KeyEventArgs) Handles TBletter2.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            Bok2.PerformClick()
+        End If
+    End Sub
+
     Private Sub Bok3_Click(sender As Object, e As EventArgs) Handles Bok3.Click
-        If (mors.convert(TBletter3.Text) = "False") Then
-        Else
+        If Not (mors.convert(TBletter3.Text) = "False") Then
             lst2 = mors.getNext(mors.convert(TBletter3.Text), lst2, 2)
             If (lst2.Count() = 1) Then
                 TBresult5.Text = ""
@@ -371,6 +380,19 @@
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub TBletter3_Enter(sender As Object, e As KeyEventArgs) Handles TBletter3.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            Bok3.PerformClick()
+        End If
+    End Sub
+
+    Private Sub BresetMors_Click(sender As Object, e As EventArgs) Handles BresetMors.Click
+        TBletter1.Text = ""
+        TBletter2.Text = ""
+        TBletter3.Text = ""
+        TBresult5.Text = ""
     End Sub
 
     Private Sub Bcolor_Click(sender As Object, e As EventArgs) Handles Bcolor.Click

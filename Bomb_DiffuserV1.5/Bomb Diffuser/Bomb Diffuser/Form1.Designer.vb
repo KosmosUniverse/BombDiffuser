@@ -187,6 +187,7 @@ Partial Class Form1
         Me.PB8 = New System.Windows.Forms.PictureBox()
         Me.PB9 = New System.Windows.Forms.PictureBox()
         Me.PB1 = New System.Windows.Forms.PictureBox()
+        Me.BresetMors = New System.Windows.Forms.Button()
         Me.GBgen.SuspendLayout()
         Me.GBbut.SuspendLayout()
         Me.GBhold.SuspendLayout()
@@ -1192,6 +1193,7 @@ Partial Class Form1
         'GBmorse
         '
         Me.GBmorse.BackColor = System.Drawing.Color.DarkOrchid
+        Me.GBmorse.Controls.Add(Me.BresetMors)
         Me.GBmorse.Controls.Add(Me.Bok3)
         Me.GBmorse.Controls.Add(Me.Bok2)
         Me.GBmorse.Controls.Add(Me.Bok)
@@ -1960,6 +1962,15 @@ Partial Class Form1
         Me.PB1.TabIndex = 0
         Me.PB1.TabStop = False
         '
+        'BresetMors
+        '
+        Me.BresetMors.Location = New System.Drawing.Point(6, 111)
+        Me.BresetMors.Name = "BresetMors"
+        Me.BresetMors.Size = New System.Drawing.Size(52, 23)
+        Me.BresetMors.TabIndex = 16
+        Me.BresetMors.Text = "Reset"
+        Me.BresetMors.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1976,6 +1987,9 @@ Partial Class Form1
         Me.Controls.Add(Me.GBnumMem)
         Me.Controls.Add(Me.GBbut)
         Me.Controls.Add(Me.GBgen)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.Text = "Bomb Diffuser"
         Me.GBgen.ResumeLayout(False)
@@ -2216,4 +2230,5 @@ Partial Class Form1
     Friend WithEvents PBres1 As PictureBox
     Friend WithEvents PBres2 As PictureBox
     Friend WithEvents GBresult As GroupBox
+    Friend WithEvents BresetMors As Button
 End Class

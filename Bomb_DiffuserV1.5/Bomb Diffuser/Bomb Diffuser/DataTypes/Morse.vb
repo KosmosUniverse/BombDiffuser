@@ -43,6 +43,7 @@
         If (morse.ContainsKey(str)) Then
             Return morse(str)
         Else
+            MsgBox("[ERROR]: the letter you entered is not available. make sure it is only composed with . and -", vbOKOnly + vbObjectError, "Error")
             Return ("False")
         End If
     End Function
