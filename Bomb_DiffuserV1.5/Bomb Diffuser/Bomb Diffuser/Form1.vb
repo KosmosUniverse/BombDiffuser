@@ -669,6 +669,8 @@
         Dim idx As Integer = 0
         Dim lstTrue As New List(Of Integer)
 
+        resetSymbols()
+
         For Each pic In pics
             If (pic) Then
                 nb += 1
@@ -686,5 +688,40 @@
                 PBres4.Image = sym.getImage(lstTrue(3))
             End If
         End If
+    End Sub
+
+    Private Sub resetSymbols()
+
+        For i As Integer = 0 To 26
+            pics(i) = False
+        Next
+
+        PB1.Image = My.Resources.Gpic1
+        PB2.Image = My.Resources.Gpic2
+        PB3.Image = My.Resources.Gpic3
+        PB4.Image = My.Resources.Gpic4
+        PB5.Image = My.Resources.Gpic5
+        PB6.Image = My.Resources.Gpic6
+        PB7.Image = My.Resources.Gpic7
+        PB8.Image = My.Resources.Gpic8
+        PB9.Image = My.Resources.Gpic9
+        PB10.Image = My.Resources.Gpic10
+        PB11.Image = My.Resources.Gpic11
+        PB12.Image = My.Resources.Gpic12
+        PB13.Image = My.Resources.Gpic13
+        PB14.Image = My.Resources.Gpic14
+        PB15.Image = My.Resources.Gpic15
+        PB16.Image = My.Resources.Gpic16
+        PB17.Image = My.Resources.Gpic17
+        PB18.Image = My.Resources.Gpic18
+        PB19.Image = My.Resources.Gpic19
+        PB20.Image = My.Resources.Gpic20
+        PB21.Image = My.Resources.Gpic21
+        PB22.Image = My.Resources.Gpic22
+        PB23.Image = My.Resources.Gpic23
+        PB24.Image = My.Resources.Gpic24
+        PB25.Image = My.Resources.Gpic25
+        PB26.Image = My.Resources.Gpic26
+        PB27.Image = My.Resources.Gpic27
     End Sub
 End Class
