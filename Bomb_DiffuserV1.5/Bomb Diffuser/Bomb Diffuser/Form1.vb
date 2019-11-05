@@ -14,6 +14,13 @@
     Dim sym As New Symbols
 
     Private Sub Bload_Click(sender As Object, e As EventArgs) Handles Bload.Click
+        Try
+            Dim tmp As Integer = Integer.Parse(TBnbBat.Text)
+        Catch ex As Exception
+            MsgBox("[ERROR]: Cannot load, battery have to be a number", vbOKOnly + vbObjectError, "Error")
+            TBnbBat.Text = ""
+            Return
+        End Try
         gen = New General(Integer.Parse(TBnbBat.Text), CBfrk.Checked, CBcar.Checked, CBserNum.Checked, CBserVoy.Checked, CBport.Checked)
 
         GBbut.Enabled = True
