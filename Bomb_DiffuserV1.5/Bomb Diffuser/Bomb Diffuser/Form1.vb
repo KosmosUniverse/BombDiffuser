@@ -687,6 +687,8 @@
                 PBres3.Image = sym.getImage(lstTrue(2))
                 PBres4.Image = sym.getImage(lstTrue(3))
             End If
+        Else
+            MsgBox("[ERROR]: You have selected more or less than 4 images", vbOKOnly + vbObjectError, "Error")
         End If
     End Sub
 
