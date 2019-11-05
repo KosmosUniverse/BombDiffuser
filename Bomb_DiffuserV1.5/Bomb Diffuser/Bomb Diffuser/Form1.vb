@@ -56,6 +56,10 @@
         End If
     End Sub
 
+    Private Sub ButtonCheckedChanged(sender As Object, e As EventArgs) Handles RBblue.CheckedChanged, RBred.CheckedChanged, RBwhite.CheckedChanged, RByellow.CheckedChanged, RBhold.CheckedChanged, RBdetonate.CheckedChanged, RBabort.CheckedChanged, RBother.CheckedChanged
+        buttonChanged()
+    End Sub
+
     Private Sub vertWireChanged()
         If ((Not (CBblue.Checked Or CBred.Checked Or CBstar.Checked Or CBled.Checked)) Or
             (Not (CBblue.Checked Or CBled.Checked) And CBred.Checked And CBstar.Checked) Or
@@ -80,10 +84,6 @@
         Else
             TBresult2.Text = "Do Not Cut"
         End If
-    End Sub
-
-    Private Sub ButtonCheckedChanged(sender As Object, e As EventArgs) Handles RBblue.CheckedChanged, RBred.CheckedChanged, RBwhite.CheckedChanged, RByellow.CheckedChanged, RBhold.CheckedChanged, RBdetonate.CheckedChanged, RBabort.CheckedChanged, RBother.CheckedChanged
-        buttonChanged()
     End Sub
 
     Private Sub VertWireCheckedChanged(sender As Object, e As EventArgs) Handles CBblue.CheckedChanged, CBred.CheckedChanged, CBled.CheckedChanged, CBstar.CheckedChanged
@@ -165,9 +165,20 @@
 
     Private Sub TBnum_TextChanged(sender As Object, e As EventArgs) Handles TBnum.TextChanged
         Dim num As Integer
+        Dim numCheck As Integer
+
+        TBlab.Text = ""
+        TBpos.Text = ""
 
         If (Not TBnum.Text.Length = 0) Then
-            With memNum.stage1(Integer.Parse(TBnum.Text))
+            numCheck = Integer.Parse(TBnum.Text)
+            If Not (numCheck <= 4 And numCheck >= 1) Then
+                TBlab.Text = ""
+                TBpos.Text = ""
+                MsgBox("[ERROR]: the number you entered have to be 1, 2, 3, or 4", vbOKOnly + vbObjectError, "Error")
+                Return
+            End If
+            With memNum.stage1(numCheck)
                 type = .Item1
                 num = .Item2
             End With
@@ -181,99 +192,35 @@
     End Sub
 
     Private Sub TBnum2_TextChanged(sender As Object, e As EventArgs) Handles TBnum2.TextChanged
-        Dim num As Integer
-        Dim tmp As Integer
 
-        If (Not TBnum2.Text.Length = 0) Then
-            If (type) Then
-                tmp = Integer.Parse(TBpos.Text)
-            Else
-                tmp = Integer.Parse(TBlab.Text)
-            End If
+        TBlab2.Text = ""
+        TBpos2.Text = ""
 
-            With memNum.stage2(Integer.Parse(TBnum2.Text), Not type, tmp)
-                type = .Item1
-                num = .Item2
-            End With
-
-            If (type) Then
-                TBlab2.Text = num
-            Else
-                TBpos2.Text = num
-            End If
-        End If
+        memNum.TBNext(2, type, TBnum2, TBpos2, TBlab2, TBpos, TBlab)
     End Sub
 
     Private Sub TBnum3_TextChanged(sender As Object, e As EventArgs) Handles TBnum3.TextChanged
-        Dim num As Integer
-        Dim tmp As Integer
 
-        If (Not TBnum3.Text.Length = 0) Then
-            If (type) Then
-                tmp = Integer.Parse(TBpos2.Text)
-            Else
-                tmp = Integer.Parse(TBlab2.Text)
-            End If
+        TBlab3.Text = ""
+        TBpos3.Text = ""
 
-            With memNum.stage3(Integer.Parse(TBnum3.Text), Not type, tmp)
-                type = .Item1
-                num = .Item2
-            End With
-
-            If (type) Then
-                TBlab3.Text = num
-            Else
-                TBpos3.Text = num
-            End If
-        End If
+        memNum.TBNext(3, type, TBnum3, TBpos3, TBlab3, TBpos2, TBlab2)
     End Sub
 
     Private Sub TBnum4_TextChanged(sender As Object, e As EventArgs) Handles TBnum4.TextChanged
-        Dim num As Integer
-        Dim tmp As Integer
 
-        If (Not TBnum4.Text.Length = 0) Then
-            If (type) Then
-                tmp = Integer.Parse(TBpos3.Text)
-            Else
-                tmp = Integer.Parse(TBlab3.Text)
-            End If
+        TBlab4.Text = ""
+        TBpos4.Text = ""
 
-            With memNum.stage4(Integer.Parse(TBnum4.Text), Not type, tmp)
-                type = .Item1
-                num = .Item2
-            End With
-
-            If (type) Then
-                TBlab4.Text = num
-            Else
-                TBpos4.Text = num
-            End If
-        End If
+        memNum.TBNext(4, type, TBnum4, TBpos4, TBlab4, TBpos3, TBlab3)
     End Sub
 
     Private Sub TBnum5_TextChanged(sender As Object, e As EventArgs) Handles TBnum5.TextChanged
-        Dim num As Integer
-        Dim tmp As Integer
 
-        If (Not TBnum5.Text.Length = 0) Then
-            If (type) Then
-                tmp = Integer.Parse(TBpos4.Text)
-            Else
-                tmp = Integer.Parse(TBlab4.Text)
-            End If
+        TBlab5.Text = ""
+        TBpos5.Text = ""
 
-            With memNum.stage5(Integer.Parse(TBnum5.Text), Not type, tmp)
-                type = .Item1
-                num = .Item2
-            End With
-
-            If (type) Then
-                TBlab5.Text = num
-            Else
-                TBpos5.Text = num
-            End If
-        End If
+        memNum.TBNext(5, type, TBnum5, TBpos5, TBlab5, TBpos4, TBlab4)
     End Sub
 
     Private Sub Breset2_Click(sender As Object, e As EventArgs) Handles Breset2.Click

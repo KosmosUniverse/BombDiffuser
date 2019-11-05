@@ -23,6 +23,74 @@
         Next
     End Sub
 
+    Public Sub TBNext(stage As Integer, type As Boolean, TBcurNum As TextBox, TBcurpos As TextBox, TBcurLab As TextBox, TBprevPos As TextBox, TBprevLab As TextBox)
+        Dim num As Integer
+        Dim tmp As Integer
+        Dim numCheck As Integer
+
+        If (Not TBcurNum.Text.Length = 0) Then
+            If (TBprevPos.Text.Length = 0 Or TBprevLab.Text.Length = 0) Then
+                MsgBox("[ERROR]: you forgot to fulfill one of the previous field (position or label)", vbOKOnly + vbObjectError, "Error")
+                TBcurNum.Text = ""
+                Return
+            End If
+
+            If (type) Then
+                tmp = Integer.Parse(TBprevPos.Text)
+                If Not (tmp <= 4 And tmp >= 1) Then
+                    MsgBox("[ERROR]: the number you entered in previous position field have to be 1, 2, 3, or 4", vbOKOnly + vbObjectError, "Error")
+                    TBcurNum.Text = ""
+                    Return
+                End If
+            Else
+                tmp = Integer.Parse(TBprevLab.Text)
+                If Not (tmp <= 4 And tmp >= 1) Then
+                    MsgBox("[ERROR]: the number you entered in previous label field have to be 1, 2, 3, or 4", vbOKOnly + vbObjectError, "Error")
+                    TBcurNum.Text = ""
+                    Return
+                End If
+            End If
+
+            numCheck = Integer.Parse(TBcurNum.Text)
+            If Not (numCheck <= 4 And numCheck >= 1) Then
+                MsgBox("[ERROR]: the number you entered have to be 1, 2, 3, or 4", vbOKOnly + vbObjectError, "Error")
+                TBcurLab.Text = ""
+                TBcurpos.Text = ""
+                TBcurNum.Text = ""
+                Return
+            End If
+
+            Select Case stage
+                Case 2
+                    With stage2(numCheck, Not type, tmp)
+                        type = .Item1
+                        num = .Item2
+                    End With
+                Case 3
+                    With stage3(numCheck, Not type, tmp)
+                        type = .Item1
+                        num = .Item2
+                    End With
+                Case 4
+                    With stage4(numCheck, Not type, tmp)
+                        type = .Item1
+                        num = .Item2
+                    End With
+                Case 5
+                    With stage5(numCheck, Not type, tmp)
+                        type = .Item1
+                        num = .Item2
+                    End With
+            End Select
+
+            If (type) Then
+                TBcurLab.Text = num
+            Else
+                TBcurpos.Text = num
+            End If
+        End If
+    End Sub
+
     Public Function stage1(num As Integer) As Tuple(Of Boolean, Integer)
         Dim tmp As Integer
 
@@ -159,10 +227,10 @@
             tmp = stage(1).label
             tmp2 = True
         ElseIf (num = 3) Then
-            tmp = stage(2).label
+            tmp = stage(3).label
             tmp2 = True
         Else
-            tmp = stage(3).label
+            tmp = stage(2).label
             tmp2 = True
         End If
 
