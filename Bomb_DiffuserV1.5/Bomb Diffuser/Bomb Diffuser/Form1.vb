@@ -46,6 +46,11 @@
         vertWireChanged()
     End Sub
 
+    Private Sub GeneralEnter(sender As Object, e As KeyEventArgs) Handles TBnbBat.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            Bload.PerformClick()
+        End If
+    End Sub
 
     Private Sub buttonChanged()
         If (RBblue.Checked And RBabort.Checked) Then

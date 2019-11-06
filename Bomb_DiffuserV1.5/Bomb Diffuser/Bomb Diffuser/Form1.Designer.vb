@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.GBgen = New System.Windows.Forms.GroupBox()
         Me.Bload = New System.Windows.Forms.Button()
         Me.CBserVoy = New System.Windows.Forms.CheckBox()
@@ -157,11 +158,34 @@ Partial Class Form1
         Me.LblStrike = New System.Windows.Forms.Label()
         Me.GBsymbol = New System.Windows.Forms.GroupBox()
         Me.GBresult = New System.Windows.Forms.GroupBox()
+        Me.Bprocess = New System.Windows.Forms.Button()
+        Me.GBMaze = New System.Windows.Forms.GroupBox()
+        Me.TBPath = New System.Windows.Forms.TextBox()
+        Me.BresetMaze = New System.Windows.Forms.Button()
+        Me.BPath = New System.Windows.Forms.Button()
+        Me.BSearchMaze = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TBytriangle = New System.Windows.Forms.TextBox()
+        Me.TBxtriangle = New System.Windows.Forms.TextBox()
+        Me.TBysquare = New System.Windows.Forms.TextBox()
+        Me.TBxsquare = New System.Windows.Forms.TextBox()
+        Me.TBycircle2 = New System.Windows.Forms.TextBox()
+        Me.TBxcircle2 = New System.Windows.Forms.TextBox()
+        Me.TBycircle1 = New System.Windows.Forms.TextBox()
+        Me.TBxcricle1 = New System.Windows.Forms.TextBox()
         Me.PBres1 = New System.Windows.Forms.PictureBox()
         Me.PBres2 = New System.Windows.Forms.PictureBox()
         Me.PBres3 = New System.Windows.Forms.PictureBox()
         Me.PBres4 = New System.Windows.Forms.PictureBox()
-        Me.Bprocess = New System.Windows.Forms.Button()
         Me.PB20 = New System.Windows.Forms.PictureBox()
         Me.PB21 = New System.Windows.Forms.PictureBox()
         Me.PB22 = New System.Windows.Forms.PictureBox()
@@ -189,29 +213,6 @@ Partial Class Form1
         Me.PB8 = New System.Windows.Forms.PictureBox()
         Me.PB9 = New System.Windows.Forms.PictureBox()
         Me.PB1 = New System.Windows.Forms.PictureBox()
-        Me.GBMaze = New System.Windows.Forms.GroupBox()
-        Me.TBPath = New System.Windows.Forms.TextBox()
-        Me.BresetMaze = New System.Windows.Forms.Button()
-        Me.BPath = New System.Windows.Forms.Button()
-        Me.BSearchMaze = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TBytriangle = New System.Windows.Forms.TextBox()
-        Me.TBxtriangle = New System.Windows.Forms.TextBox()
-        Me.TBysquare = New System.Windows.Forms.TextBox()
-        Me.TBxsquare = New System.Windows.Forms.TextBox()
-        Me.TBycircle2 = New System.Windows.Forms.TextBox()
-        Me.TBxcircle2 = New System.Windows.Forms.TextBox()
-        Me.TBycircle1 = New System.Windows.Forms.TextBox()
-        Me.TBxcricle1 = New System.Windows.Forms.TextBox()
         Me.GBgen.SuspendLayout()
         Me.GBbut.SuspendLayout()
         Me.GBhold.SuspendLayout()
@@ -232,6 +233,7 @@ Partial Class Form1
         Me.GBsimon.SuspendLayout()
         Me.GBsymbol.SuspendLayout()
         Me.GBresult.SuspendLayout()
+        Me.GBMaze.SuspendLayout()
         CType(Me.PBres1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PBres2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PBres3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -263,7 +265,6 @@ Partial Class Form1
         CType(Me.PB8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GBMaze.SuspendLayout()
         Me.SuspendLayout()
         '
         'GBgen
@@ -1657,6 +1658,236 @@ Partial Class Form1
         Me.GBresult.TabStop = False
         Me.GBresult.Text = "Result"
         '
+        'Bprocess
+        '
+        Me.Bprocess.Location = New System.Drawing.Point(358, 16)
+        Me.Bprocess.Name = "Bprocess"
+        Me.Bprocess.Size = New System.Drawing.Size(62, 31)
+        Me.Bprocess.TabIndex = 31
+        Me.Bprocess.Text = "Process"
+        Me.Bprocess.UseVisualStyleBackColor = True
+        '
+        'GBMaze
+        '
+        Me.GBMaze.BackColor = System.Drawing.Color.PeachPuff
+        Me.GBMaze.Controls.Add(Me.TBPath)
+        Me.GBMaze.Controls.Add(Me.BresetMaze)
+        Me.GBMaze.Controls.Add(Me.BPath)
+        Me.GBMaze.Controls.Add(Me.BSearchMaze)
+        Me.GBMaze.Controls.Add(Me.Label10)
+        Me.GBMaze.Controls.Add(Me.Label9)
+        Me.GBMaze.Controls.Add(Me.Label7)
+        Me.GBMaze.Controls.Add(Me.Label8)
+        Me.GBMaze.Controls.Add(Me.Label5)
+        Me.GBMaze.Controls.Add(Me.Label6)
+        Me.GBMaze.Controls.Add(Me.Label3)
+        Me.GBMaze.Controls.Add(Me.Label4)
+        Me.GBMaze.Controls.Add(Me.Label2)
+        Me.GBMaze.Controls.Add(Me.Label1)
+        Me.GBMaze.Controls.Add(Me.TBytriangle)
+        Me.GBMaze.Controls.Add(Me.TBxtriangle)
+        Me.GBMaze.Controls.Add(Me.TBysquare)
+        Me.GBMaze.Controls.Add(Me.TBxsquare)
+        Me.GBMaze.Controls.Add(Me.TBycircle2)
+        Me.GBMaze.Controls.Add(Me.TBxcircle2)
+        Me.GBMaze.Controls.Add(Me.TBycircle1)
+        Me.GBMaze.Controls.Add(Me.TBxcricle1)
+        Me.GBMaze.Enabled = False
+        Me.GBMaze.Location = New System.Drawing.Point(712, 12)
+        Me.GBMaze.Name = "GBMaze"
+        Me.GBMaze.Size = New System.Drawing.Size(329, 385)
+        Me.GBMaze.TabIndex = 19
+        Me.GBMaze.TabStop = False
+        Me.GBMaze.Text = "Maze"
+        '
+        'TBPath
+        '
+        Me.TBPath.Location = New System.Drawing.Point(205, 56)
+        Me.TBPath.Multiline = True
+        Me.TBPath.Name = "TBPath"
+        Me.TBPath.ReadOnly = True
+        Me.TBPath.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TBPath.Size = New System.Drawing.Size(109, 277)
+        Me.TBPath.TabIndex = 21
+        '
+        'BresetMaze
+        '
+        Me.BresetMaze.Location = New System.Drawing.Point(205, 339)
+        Me.BresetMaze.Name = "BresetMaze"
+        Me.BresetMaze.Size = New System.Drawing.Size(109, 23)
+        Me.BresetMaze.TabIndex = 20
+        Me.BresetMaze.Text = "Reset"
+        Me.BresetMaze.UseVisualStyleBackColor = True
+        '
+        'BPath
+        '
+        Me.BPath.Enabled = False
+        Me.BPath.Location = New System.Drawing.Point(205, 29)
+        Me.BPath.Name = "BPath"
+        Me.BPath.Size = New System.Drawing.Size(109, 23)
+        Me.BPath.TabIndex = 19
+        Me.BPath.Text = "Search Path"
+        Me.BPath.UseVisualStyleBackColor = True
+        '
+        'BSearchMaze
+        '
+        Me.BSearchMaze.Location = New System.Drawing.Point(13, 213)
+        Me.BSearchMaze.Name = "BSearchMaze"
+        Me.BSearchMaze.Size = New System.Drawing.Size(142, 23)
+        Me.BSearchMaze.TabIndex = 18
+        Me.BSearchMaze.Text = "Search Maze"
+        Me.BSearchMaze.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(10, 43)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(92, 13)
+        Me.Label10.TabIndex = 17
+        Me.Label10.Text = "Y is ROW number"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(10, 27)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(111, 13)
+        Me.Label9.TabIndex = 16
+        Me.Label9.Text = "X is COLUMN number"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(47, 347)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(90, 13)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Y of Red Triangle"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(47, 321)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(90, 13)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "X of Red Triangle"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(47, 278)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(94, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Y of White Square"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(47, 251)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(94, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "X of White Square"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(47, 181)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(94, 13)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Y of Second circle"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(47, 155)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(94, 13)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "X of Second circle"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(47, 107)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(108, 13)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Y of TOP LEFT circle"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(47, 81)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(108, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "X of TOP LEFT circle"
+        '
+        'TBytriangle
+        '
+        Me.TBytriangle.Enabled = False
+        Me.TBytriangle.Location = New System.Drawing.Point(13, 344)
+        Me.TBytriangle.Name = "TBytriangle"
+        Me.TBytriangle.Size = New System.Drawing.Size(28, 20)
+        Me.TBytriangle.TabIndex = 7
+        '
+        'TBxtriangle
+        '
+        Me.TBxtriangle.Enabled = False
+        Me.TBxtriangle.Location = New System.Drawing.Point(13, 318)
+        Me.TBxtriangle.Name = "TBxtriangle"
+        Me.TBxtriangle.Size = New System.Drawing.Size(28, 20)
+        Me.TBxtriangle.TabIndex = 6
+        '
+        'TBysquare
+        '
+        Me.TBysquare.Enabled = False
+        Me.TBysquare.Location = New System.Drawing.Point(13, 274)
+        Me.TBysquare.Name = "TBysquare"
+        Me.TBysquare.Size = New System.Drawing.Size(28, 20)
+        Me.TBysquare.TabIndex = 5
+        '
+        'TBxsquare
+        '
+        Me.TBxsquare.Enabled = False
+        Me.TBxsquare.Location = New System.Drawing.Point(13, 248)
+        Me.TBxsquare.Name = "TBxsquare"
+        Me.TBxsquare.Size = New System.Drawing.Size(28, 20)
+        Me.TBxsquare.TabIndex = 4
+        '
+        'TBycircle2
+        '
+        Me.TBycircle2.Location = New System.Drawing.Point(13, 178)
+        Me.TBycircle2.Name = "TBycircle2"
+        Me.TBycircle2.Size = New System.Drawing.Size(28, 20)
+        Me.TBycircle2.TabIndex = 3
+        '
+        'TBxcircle2
+        '
+        Me.TBxcircle2.Location = New System.Drawing.Point(13, 152)
+        Me.TBxcircle2.Name = "TBxcircle2"
+        Me.TBxcircle2.Size = New System.Drawing.Size(28, 20)
+        Me.TBxcircle2.TabIndex = 2
+        '
+        'TBycircle1
+        '
+        Me.TBycircle1.Location = New System.Drawing.Point(13, 104)
+        Me.TBycircle1.Name = "TBycircle1"
+        Me.TBycircle1.Size = New System.Drawing.Size(28, 20)
+        Me.TBycircle1.TabIndex = 1
+        '
+        'TBxcricle1
+        '
+        Me.TBxcricle1.Location = New System.Drawing.Point(13, 78)
+        Me.TBxcricle1.Name = "TBxcricle1"
+        Me.TBxcricle1.Size = New System.Drawing.Size(28, 20)
+        Me.TBxcricle1.TabIndex = 0
+        '
         'PBres1
         '
         Me.PBres1.BackColor = System.Drawing.Color.White
@@ -1700,15 +1931,6 @@ Partial Class Form1
         Me.PBres4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PBres4.TabIndex = 29
         Me.PBres4.TabStop = False
-        '
-        'Bprocess
-        '
-        Me.Bprocess.Location = New System.Drawing.Point(358, 16)
-        Me.Bprocess.Name = "Bprocess"
-        Me.Bprocess.Size = New System.Drawing.Size(62, 31)
-        Me.Bprocess.TabIndex = 31
-        Me.Bprocess.Text = "Process"
-        Me.Bprocess.UseVisualStyleBackColor = True
         '
         'PB20
         '
@@ -2009,227 +2231,6 @@ Partial Class Form1
         Me.PB1.TabIndex = 0
         Me.PB1.TabStop = False
         '
-        'GBMaze
-        '
-        Me.GBMaze.BackColor = System.Drawing.Color.PeachPuff
-        Me.GBMaze.Controls.Add(Me.TBPath)
-        Me.GBMaze.Controls.Add(Me.BresetMaze)
-        Me.GBMaze.Controls.Add(Me.BPath)
-        Me.GBMaze.Controls.Add(Me.BSearchMaze)
-        Me.GBMaze.Controls.Add(Me.Label10)
-        Me.GBMaze.Controls.Add(Me.Label9)
-        Me.GBMaze.Controls.Add(Me.Label7)
-        Me.GBMaze.Controls.Add(Me.Label8)
-        Me.GBMaze.Controls.Add(Me.Label5)
-        Me.GBMaze.Controls.Add(Me.Label6)
-        Me.GBMaze.Controls.Add(Me.Label3)
-        Me.GBMaze.Controls.Add(Me.Label4)
-        Me.GBMaze.Controls.Add(Me.Label2)
-        Me.GBMaze.Controls.Add(Me.Label1)
-        Me.GBMaze.Controls.Add(Me.TBytriangle)
-        Me.GBMaze.Controls.Add(Me.TBxtriangle)
-        Me.GBMaze.Controls.Add(Me.TBysquare)
-        Me.GBMaze.Controls.Add(Me.TBxsquare)
-        Me.GBMaze.Controls.Add(Me.TBycircle2)
-        Me.GBMaze.Controls.Add(Me.TBxcircle2)
-        Me.GBMaze.Controls.Add(Me.TBycircle1)
-        Me.GBMaze.Controls.Add(Me.TBxcricle1)
-        Me.GBMaze.Enabled = False
-        Me.GBMaze.Location = New System.Drawing.Point(712, 12)
-        Me.GBMaze.Name = "GBMaze"
-        Me.GBMaze.Size = New System.Drawing.Size(329, 385)
-        Me.GBMaze.TabIndex = 19
-        Me.GBMaze.TabStop = False
-        Me.GBMaze.Text = "Maze"
-        '
-        'TBPath
-        '
-        Me.TBPath.Location = New System.Drawing.Point(205, 56)
-        Me.TBPath.Multiline = True
-        Me.TBPath.Name = "TBPath"
-        Me.TBPath.ReadOnly = True
-        Me.TBPath.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TBPath.Size = New System.Drawing.Size(109, 277)
-        Me.TBPath.TabIndex = 21
-        '
-        'BresetMaze
-        '
-        Me.BresetMaze.Location = New System.Drawing.Point(205, 339)
-        Me.BresetMaze.Name = "BresetMaze"
-        Me.BresetMaze.Size = New System.Drawing.Size(109, 23)
-        Me.BresetMaze.TabIndex = 20
-        Me.BresetMaze.Text = "Reset"
-        Me.BresetMaze.UseVisualStyleBackColor = True
-        '
-        'BPath
-        '
-        Me.BPath.Enabled = False
-        Me.BPath.Location = New System.Drawing.Point(205, 29)
-        Me.BPath.Name = "BPath"
-        Me.BPath.Size = New System.Drawing.Size(109, 23)
-        Me.BPath.TabIndex = 19
-        Me.BPath.Text = "Search Path"
-        Me.BPath.UseVisualStyleBackColor = True
-        '
-        'BSearchMaze
-        '
-        Me.BSearchMaze.Location = New System.Drawing.Point(13, 213)
-        Me.BSearchMaze.Name = "BSearchMaze"
-        Me.BSearchMaze.Size = New System.Drawing.Size(142, 23)
-        Me.BSearchMaze.TabIndex = 18
-        Me.BSearchMaze.Text = "Search Maze"
-        Me.BSearchMaze.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(10, 43)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(92, 13)
-        Me.Label10.TabIndex = 17
-        Me.Label10.Text = "Y is ROW number"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(10, 27)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(111, 13)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "X is COLUMN number"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(47, 347)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(90, 13)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Y of Red Triangle"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(47, 321)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(90, 13)
-        Me.Label8.TabIndex = 14
-        Me.Label8.Text = "X of Red Triangle"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(47, 278)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(94, 13)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Y of White Square"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(47, 251)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(94, 13)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "X of White Square"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(47, 181)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 13)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Y of Second circle"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(47, 155)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(94, 13)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "X of Second circle"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(47, 107)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 13)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Y of TOP LEFT circle"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(47, 81)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 13)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "X of TOP LEFT circle"
-        '
-        'TBytriangle
-        '
-        Me.TBytriangle.Enabled = False
-        Me.TBytriangle.Location = New System.Drawing.Point(13, 344)
-        Me.TBytriangle.Name = "TBytriangle"
-        Me.TBytriangle.Size = New System.Drawing.Size(28, 20)
-        Me.TBytriangle.TabIndex = 7
-        '
-        'TBxtriangle
-        '
-        Me.TBxtriangle.Enabled = False
-        Me.TBxtriangle.Location = New System.Drawing.Point(13, 318)
-        Me.TBxtriangle.Name = "TBxtriangle"
-        Me.TBxtriangle.Size = New System.Drawing.Size(28, 20)
-        Me.TBxtriangle.TabIndex = 6
-        '
-        'TBysquare
-        '
-        Me.TBysquare.Enabled = False
-        Me.TBysquare.Location = New System.Drawing.Point(13, 274)
-        Me.TBysquare.Name = "TBysquare"
-        Me.TBysquare.Size = New System.Drawing.Size(28, 20)
-        Me.TBysquare.TabIndex = 5
-        '
-        'TBxsquare
-        '
-        Me.TBxsquare.Enabled = False
-        Me.TBxsquare.Location = New System.Drawing.Point(13, 248)
-        Me.TBxsquare.Name = "TBxsquare"
-        Me.TBxsquare.Size = New System.Drawing.Size(28, 20)
-        Me.TBxsquare.TabIndex = 4
-        '
-        'TBycircle2
-        '
-        Me.TBycircle2.Location = New System.Drawing.Point(13, 178)
-        Me.TBycircle2.Name = "TBycircle2"
-        Me.TBycircle2.Size = New System.Drawing.Size(28, 20)
-        Me.TBycircle2.TabIndex = 3
-        '
-        'TBxcircle2
-        '
-        Me.TBxcircle2.Location = New System.Drawing.Point(13, 152)
-        Me.TBxcircle2.Name = "TBxcircle2"
-        Me.TBxcircle2.Size = New System.Drawing.Size(28, 20)
-        Me.TBxcircle2.TabIndex = 2
-        '
-        'TBycircle1
-        '
-        Me.TBycircle1.Location = New System.Drawing.Point(13, 104)
-        Me.TBycircle1.Name = "TBycircle1"
-        Me.TBycircle1.Size = New System.Drawing.Size(28, 20)
-        Me.TBycircle1.TabIndex = 1
-        '
-        'TBxcricle1
-        '
-        Me.TBxcricle1.Location = New System.Drawing.Point(13, 78)
-        Me.TBxcricle1.Name = "TBxcricle1"
-        Me.TBxcricle1.Size = New System.Drawing.Size(28, 20)
-        Me.TBxcricle1.TabIndex = 0
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2248,6 +2249,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GBbut)
         Me.Controls.Add(Me.GBgen)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
@@ -2290,6 +2292,8 @@ Partial Class Form1
         Me.GBsimon.PerformLayout()
         Me.GBsymbol.ResumeLayout(False)
         Me.GBresult.ResumeLayout(False)
+        Me.GBMaze.ResumeLayout(False)
+        Me.GBMaze.PerformLayout()
         CType(Me.PBres1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PBres2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PBres3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2321,8 +2325,6 @@ Partial Class Form1
         CType(Me.PB8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GBMaze.ResumeLayout(False)
-        Me.GBMaze.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

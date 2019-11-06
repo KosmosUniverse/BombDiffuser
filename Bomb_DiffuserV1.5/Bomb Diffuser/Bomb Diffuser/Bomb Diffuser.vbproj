@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="DataTypes\General.vb" />
     <Compile Include="DataTypes\HoriWire.vb" />
+    <Compile Include="DataTypes\Maze.vb" />
     <Compile Include="DataTypes\MemNum.vb" />
     <Compile Include="DataTypes\Morse.vb" />
     <Compile Include="DataTypes\Pass.vb" />
@@ -156,9 +157,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pic1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\pic1.png" />
@@ -321,6 +319,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Gpic27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BombDiffuserLogo.png" />
+    <None Include="Resources\BombDiffuserLogo.ico" />
+    <Content Include="Resources\Maze1.txt" />
+    <Content Include="Resources\Maze2.txt" />
+    <Content Include="Resources\Maze3.txt" />
+    <Content Include="Resources\Maze4.txt" />
+    <Content Include="Resources\Maze5.txt" />
+    <Content Include="Resources\Maze6.txt" />
+    <Content Include="Resources\Maze7.txt" />
+    <Content Include="Resources\Maze8.txt" />
+    <Content Include="Resources\Maze9.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
