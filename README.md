@@ -30,4 +30,4 @@ So it doesn't break the game.
 
 ## Authors
 - **Thomas Ducret** - Main Developer
-- **Vincent Vuong** - Bug and idea finder
+- **Vincent Vuong** - Bug and idea finder + developer
