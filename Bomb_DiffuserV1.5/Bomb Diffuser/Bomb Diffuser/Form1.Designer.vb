@@ -190,28 +190,28 @@ Partial Class Form1
         Me.PB9 = New System.Windows.Forms.PictureBox()
         Me.PB1 = New System.Windows.Forms.PictureBox()
         Me.GMaze = New System.Windows.Forms.GroupBox()
-        Me.TBxcricle1 = New System.Windows.Forms.TextBox()
-        Me.TBycircle1 = New System.Windows.Forms.TextBox()
-        Me.TBycircle2 = New System.Windows.Forms.TextBox()
-        Me.TBxcircle2 = New System.Windows.Forms.TextBox()
-        Me.TBysquare = New System.Windows.Forms.TextBox()
-        Me.TBxsquare = New System.Windows.Forms.TextBox()
-        Me.TBytriangle = New System.Windows.Forms.TextBox()
-        Me.TBxtriangle = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TBPath = New System.Windows.Forms.TextBox()
+        Me.BresetMaze = New System.Windows.Forms.Button()
+        Me.BPath = New System.Windows.Forms.Button()
+        Me.BSearchMaze = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.BSearchMaze = New System.Windows.Forms.Button()
-        Me.BPath = New System.Windows.Forms.Button()
-        Me.BresetMaze = New System.Windows.Forms.Button()
-        Me.TBPath = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TBytriangle = New System.Windows.Forms.TextBox()
+        Me.TBxtriangle = New System.Windows.Forms.TextBox()
+        Me.TBysquare = New System.Windows.Forms.TextBox()
+        Me.TBxsquare = New System.Windows.Forms.TextBox()
+        Me.TBycircle2 = New System.Windows.Forms.TextBox()
+        Me.TBxcircle2 = New System.Windows.Forms.TextBox()
+        Me.TBycircle1 = New System.Windows.Forms.TextBox()
+        Me.TBxcricle1 = New System.Windows.Forms.TextBox()
         Me.GBgen.SuspendLayout()
         Me.GBbut.SuspendLayout()
         Me.GBhold.SuspendLayout()
@@ -2041,119 +2041,60 @@ Partial Class Form1
         Me.GMaze.TabStop = False
         Me.GMaze.Text = "Maze"
         '
-        'TBxcricle1
+        'TBPath
         '
-        Me.TBxcricle1.Location = New System.Drawing.Point(13, 78)
-        Me.TBxcricle1.Name = "TBxcricle1"
-        Me.TBxcricle1.Size = New System.Drawing.Size(28, 20)
-        Me.TBxcricle1.TabIndex = 0
+        Me.TBPath.Location = New System.Drawing.Point(205, 56)
+        Me.TBPath.Multiline = True
+        Me.TBPath.Name = "TBPath"
+        Me.TBPath.ReadOnly = True
+        Me.TBPath.Size = New System.Drawing.Size(109, 277)
+        Me.TBPath.TabIndex = 21
         '
-        'TBycircle1
+        'BresetMaze
         '
-        Me.TBycircle1.Location = New System.Drawing.Point(13, 104)
-        Me.TBycircle1.Name = "TBycircle1"
-        Me.TBycircle1.Size = New System.Drawing.Size(28, 20)
-        Me.TBycircle1.TabIndex = 1
+        Me.BresetMaze.Location = New System.Drawing.Point(205, 339)
+        Me.BresetMaze.Name = "BresetMaze"
+        Me.BresetMaze.Size = New System.Drawing.Size(109, 23)
+        Me.BresetMaze.TabIndex = 20
+        Me.BresetMaze.Text = "Reset"
+        Me.BresetMaze.UseVisualStyleBackColor = True
         '
-        'TBycircle2
+        'BPath
         '
-        Me.TBycircle2.Location = New System.Drawing.Point(13, 178)
-        Me.TBycircle2.Name = "TBycircle2"
-        Me.TBycircle2.Size = New System.Drawing.Size(28, 20)
-        Me.TBycircle2.TabIndex = 3
+        Me.BPath.Enabled = False
+        Me.BPath.Location = New System.Drawing.Point(205, 29)
+        Me.BPath.Name = "BPath"
+        Me.BPath.Size = New System.Drawing.Size(109, 23)
+        Me.BPath.TabIndex = 19
+        Me.BPath.Text = "Search Path"
+        Me.BPath.UseVisualStyleBackColor = True
         '
-        'TBxcircle2
+        'BSearchMaze
         '
-        Me.TBxcircle2.Location = New System.Drawing.Point(13, 152)
-        Me.TBxcircle2.Name = "TBxcircle2"
-        Me.TBxcircle2.Size = New System.Drawing.Size(28, 20)
-        Me.TBxcircle2.TabIndex = 2
+        Me.BSearchMaze.Location = New System.Drawing.Point(13, 213)
+        Me.BSearchMaze.Name = "BSearchMaze"
+        Me.BSearchMaze.Size = New System.Drawing.Size(142, 23)
+        Me.BSearchMaze.TabIndex = 18
+        Me.BSearchMaze.Text = "Search Maze"
+        Me.BSearchMaze.UseVisualStyleBackColor = True
         '
-        'TBysquare
+        'Label10
         '
-        Me.TBysquare.Enabled = False
-        Me.TBysquare.Location = New System.Drawing.Point(13, 274)
-        Me.TBysquare.Name = "TBysquare"
-        Me.TBysquare.Size = New System.Drawing.Size(28, 20)
-        Me.TBysquare.TabIndex = 5
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(10, 43)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(92, 13)
+        Me.Label10.TabIndex = 17
+        Me.Label10.Text = "Y is ROW number"
         '
-        'TBxsquare
+        'Label9
         '
-        Me.TBxsquare.Enabled = False
-        Me.TBxsquare.Location = New System.Drawing.Point(13, 248)
-        Me.TBxsquare.Name = "TBxsquare"
-        Me.TBxsquare.Size = New System.Drawing.Size(28, 20)
-        Me.TBxsquare.TabIndex = 4
-        '
-        'TBytriangle
-        '
-        Me.TBytriangle.Enabled = False
-        Me.TBytriangle.Location = New System.Drawing.Point(13, 344)
-        Me.TBytriangle.Name = "TBytriangle"
-        Me.TBytriangle.Size = New System.Drawing.Size(28, 20)
-        Me.TBytriangle.TabIndex = 7
-        '
-        'TBxtriangle
-        '
-        Me.TBxtriangle.Enabled = False
-        Me.TBxtriangle.Location = New System.Drawing.Point(13, 318)
-        Me.TBxtriangle.Name = "TBxtriangle"
-        Me.TBxtriangle.Size = New System.Drawing.Size(28, 20)
-        Me.TBxtriangle.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(47, 81)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 13)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "X of TOP LEFT circle"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(47, 107)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 13)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Y of TOP LEFT circle"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(47, 181)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 13)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Y of Second circle"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(47, 155)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(94, 13)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "X of Second circle"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(47, 278)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(94, 13)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Y of White Square"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(47, 251)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(94, 13)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "X of White Square"
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(10, 27)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(111, 13)
+        Me.Label9.TabIndex = 16
+        Me.Label9.Text = "X is COLUMN number"
         '
         'Label7
         '
@@ -2173,58 +2114,119 @@ Partial Class Form1
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "X of Red Triangle"
         '
-        'Label9
+        'Label5
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(10, 27)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(111, 13)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "X is COLUMN number"
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(47, 278)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(94, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Y of White Square"
         '
-        'Label10
+        'Label6
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(10, 43)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(92, 13)
-        Me.Label10.TabIndex = 17
-        Me.Label10.Text = "Y is ROW number"
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(47, 251)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(94, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "X of White Square"
         '
-        'BSearchMaze
+        'Label3
         '
-        Me.BSearchMaze.Location = New System.Drawing.Point(13, 213)
-        Me.BSearchMaze.Name = "BSearchMaze"
-        Me.BSearchMaze.Size = New System.Drawing.Size(142, 23)
-        Me.BSearchMaze.TabIndex = 18
-        Me.BSearchMaze.Text = "Search Maze"
-        Me.BSearchMaze.UseVisualStyleBackColor = True
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(47, 181)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(94, 13)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Y of Second circle"
         '
-        'BPath
+        'Label4
         '
-        Me.BPath.Location = New System.Drawing.Point(205, 29)
-        Me.BPath.Name = "BPath"
-        Me.BPath.Size = New System.Drawing.Size(109, 23)
-        Me.BPath.TabIndex = 19
-        Me.BPath.Text = "Search Path"
-        Me.BPath.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(47, 155)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(94, 13)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "X of Second circle"
         '
-        'BresetMaze
+        'Label2
         '
-        Me.BresetMaze.Location = New System.Drawing.Point(205, 339)
-        Me.BresetMaze.Name = "BresetMaze"
-        Me.BresetMaze.Size = New System.Drawing.Size(109, 23)
-        Me.BresetMaze.TabIndex = 20
-        Me.BresetMaze.Text = "Reset"
-        Me.BresetMaze.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(47, 107)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(108, 13)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Y of TOP LEFT circle"
         '
-        'TBPath
+        'Label1
         '
-        Me.TBPath.Location = New System.Drawing.Point(205, 56)
-        Me.TBPath.Multiline = True
-        Me.TBPath.Name = "TBPath"
-        Me.TBPath.Size = New System.Drawing.Size(109, 277)
-        Me.TBPath.TabIndex = 21
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(47, 81)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(108, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "X of TOP LEFT circle"
+        '
+        'TBytriangle
+        '
+        Me.TBytriangle.Enabled = False
+        Me.TBytriangle.Location = New System.Drawing.Point(13, 344)
+        Me.TBytriangle.Name = "TBytriangle"
+        Me.TBytriangle.Size = New System.Drawing.Size(28, 20)
+        Me.TBytriangle.TabIndex = 7
+        '
+        'TBxtriangle
+        '
+        Me.TBxtriangle.Enabled = False
+        Me.TBxtriangle.Location = New System.Drawing.Point(13, 318)
+        Me.TBxtriangle.Name = "TBxtriangle"
+        Me.TBxtriangle.Size = New System.Drawing.Size(28, 20)
+        Me.TBxtriangle.TabIndex = 6
+        '
+        'TBysquare
+        '
+        Me.TBysquare.Enabled = False
+        Me.TBysquare.Location = New System.Drawing.Point(13, 274)
+        Me.TBysquare.Name = "TBysquare"
+        Me.TBysquare.Size = New System.Drawing.Size(28, 20)
+        Me.TBysquare.TabIndex = 5
+        '
+        'TBxsquare
+        '
+        Me.TBxsquare.Enabled = False
+        Me.TBxsquare.Location = New System.Drawing.Point(13, 248)
+        Me.TBxsquare.Name = "TBxsquare"
+        Me.TBxsquare.Size = New System.Drawing.Size(28, 20)
+        Me.TBxsquare.TabIndex = 4
+        '
+        'TBycircle2
+        '
+        Me.TBycircle2.Location = New System.Drawing.Point(13, 178)
+        Me.TBycircle2.Name = "TBycircle2"
+        Me.TBycircle2.Size = New System.Drawing.Size(28, 20)
+        Me.TBycircle2.TabIndex = 3
+        '
+        'TBxcircle2
+        '
+        Me.TBxcircle2.Location = New System.Drawing.Point(13, 152)
+        Me.TBxcircle2.Name = "TBxcircle2"
+        Me.TBxcircle2.Size = New System.Drawing.Size(28, 20)
+        Me.TBxcircle2.TabIndex = 2
+        '
+        'TBycircle1
+        '
+        Me.TBycircle1.Location = New System.Drawing.Point(13, 104)
+        Me.TBycircle1.Name = "TBycircle1"
+        Me.TBycircle1.Size = New System.Drawing.Size(28, 20)
+        Me.TBycircle1.TabIndex = 1
+        '
+        'TBxcricle1
+        '
+        Me.TBxcricle1.Location = New System.Drawing.Point(13, 78)
+        Me.TBxcricle1.Name = "TBxcricle1"
+        Me.TBxcricle1.Size = New System.Drawing.Size(28, 20)
+        Me.TBxcricle1.TabIndex = 0
         '
         'Form1
         '

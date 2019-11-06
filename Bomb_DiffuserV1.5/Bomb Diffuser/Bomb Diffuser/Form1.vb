@@ -7,6 +7,7 @@
     Dim mors As New Morse
     Dim hori As New HoriWire
     Dim sim As New Simon
+    Dim maze As New Maze
     Dim type As Boolean
     Dim lst As New List(Of String)
     Dim lst2 As New Dictionary(Of String, String)
@@ -798,5 +799,88 @@
         PB25.Image = My.Resources.pic25
         PB26.Image = My.Resources.pic26
         PB27.Image = My.Resources.pic27
+    End Sub
+
+    Private Function checkInput(str As String) As Boolean
+        If (str.Length = 0) Then
+            Return False
+        ElseIf (Integer.Parse(str) > 6 Or Integer.Parse(str) < 1) Then
+            Return False
+        End If
+    End Function
+
+    Private Sub BSearchMaze_Click(sender As Object, e As EventArgs) Handles BSearchMaze.Click
+        If (checkInput(TBxcricle1.Text) Or checkInput(TBycircle1.Text) Or checkInput(TBxcircle2.Text) Or checkInput(TBycircle2.Text)) Then
+            MsgBox("[ERROR]: You forgot to fulfill one or more of the 4 field above.", vbOKOnly + vbObjectError, "Error")
+            Return
+        End If
+
+        Dim firstCircle As New Maze.Pos
+        Dim secondCircle As New Maze.Pos
+
+        With firstCircle
+            .x = Integer.Parse(TBxcricle1.Text)
+            .y = Integer.Parse(TBycircle1.Text)
+        End With
+
+        With secondCircle
+            .x = Integer.Parse(TBxcircle2.Text)
+            .y = Integer.Parse(TBycircle2.Text)
+        End With
+
+        If (maze.selectMaze(firstCircle, secondCircle)) Then
+            TBxsquare.Enabled = True
+            TBysquare.Enabled = True
+            TBxtriangle.Enabled = True
+            TBytriangle.Enabled = True
+            BSearchMaze.Enabled = True
+        Else
+            TBxsquare.Enabled = False
+            TBysquare.Enabled = False
+            TBxtriangle.Enabled = False
+            TBytriangle.Enabled = False
+            BSearchMaze.Enabled = False
+            MsgBox("[ERROR]: Cannot find your maze, please verify circle coordonates.", vbOKOnly + vbObjectError, "Error")
+            Return
+        End If
+    End Sub
+
+    Private Sub BPath_Click(sender As Object, e As EventArgs) Handles BPath.Click
+        If (checkInput(TBxtriangle.Text) Or checkInput(TBytriangle.Text) Or checkInput(TBxsquare.Text) Or checkInput(TBysquare.Text)) Then
+            MsgBox("[ERROR]: You forgot to fulfill one or more of the 4 field before.", vbOKOnly + vbObjectError, "Error")
+            Return
+        End If
+
+        Dim triangle As New Maze.Pos
+        Dim square As New Maze.Pos
+
+        With triangle
+            .x = Integer.Parse(TBxtriangle.Text)
+            .y = Integer.Parse(TBytriangle.Text)
+        End With
+
+        With square
+            .x = Integer.Parse(TBxsquare.Text)
+            .y = Integer.Parse(TBysquare.Text)
+        End With
+
+        maze.searchPath(triangle, square, TBPath)
+    End Sub
+
+    Private Sub BresetMaze_Click(sender As Object, e As EventArgs) Handles BresetMaze.Click
+        TBxcricle1.Text = ""
+        TBycircle1.Text = ""
+        TBxcircle2.Text = ""
+        TBycircle2.Text = ""
+        TBxtriangle.Text = ""
+        TBytriangle.Text = ""
+        TBxsquare.Text = ""
+        TBysquare.Text = ""
+        TBPath.Text = ""
+        TBxsquare.Enabled = False
+        TBysquare.Enabled = False
+        TBxtriangle.Enabled = False
+        TBytriangle.Enabled = False
+        BSearchMaze.Enabled = False
     End Sub
 End Class

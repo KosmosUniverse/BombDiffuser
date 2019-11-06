@@ -331,6 +331,195 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1202021202021
+        '''1011101011111
+        '''1312021202021
+        '''1010111111101
+        '''1212021202031
+        '''1011101011101
+        '''1212020212021
+        '''1011111111101
+        '''1202021202121
+        '''1011101011101
+        '''1202120212021
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze1() As String
+            Get
+                Return ResourceManager.GetString("Maze1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1202021202021
+        '''1110111010111
+        '''1202120213021
+        '''1011101111101
+        '''1212021202021
+        '''1010111011101
+        '''1203120212121
+        '''1011101110101
+        '''1212121202121
+        '''1010101011101
+        '''1212021202021
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze2() As String
+            Get
+                Return ResourceManager.GetString("Maze2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1202021212021
+        '''1011101010101
+        '''1212121202121
+        '''1110101111101
+        '''1202121202121
+        '''1010101010101
+        '''1212121312131
+        '''1010101010101
+        '''1212021212121
+        '''1011111010101
+        '''1202020212021
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze3() As String
+            Get
+                Return ResourceManager.GetString("Maze3", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1302120202021
+        '''1010111111101
+        '''1212120202021
+        '''1010101111101
+        '''1212021202121
+        '''1011111011101
+        '''1312020202021
+        '''1011111111101
+        '''1202020202121
+        '''1011111110101
+        '''1202021202121
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze4() As String
+            Get
+                Return ResourceManager.GetString("Maze4", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1202020202021
+        '''1111111110101
+        '''1202020202121
+        '''1011111011111
+        '''1202120213021
+        '''1010111110101
+        '''1212020212121
+        '''1011111011101
+        '''1212020202121
+        '''1010111111101
+        '''1212020302021
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze5() As String
+            Get
+                Return ResourceManager.GetString("Maze5", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1212021203021
+        '''1010101110101
+        '''1212121202121
+        '''1010101011101
+        '''1202121212021
+        '''1011111010111
+        '''1202120212121
+        '''1110101010101
+        '''1202131212021
+        '''1011111011101
+        '''1202020212021
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze6() As String
+            Get
+                Return ResourceManager.GetString("Maze6", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1203020212021
+        '''1011111010101
+        '''1212021202121
+        '''1010111111101
+        '''1202120212021
+        '''1111101110111
+        '''1202120202121
+        '''1010101111101
+        '''1212120202121
+        '''1011111110101
+        '''1203020202021
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze7() As String
+            Get
+                Return ResourceManager.GetString("Maze7", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1212020312021
+        '''1010111010101
+        '''1202021202121
+        '''1011111111101
+        '''1212020202121
+        '''1010111110101
+        '''1212031202021
+        '''1011101111111
+        '''1212120202021
+        '''1010111111111
+        '''1202020202021
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze8() As String
+            Get
+                Return ResourceManager.GetString("Maze8", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1111111111111
+        '''1212020202021
+        '''1010111110101
+        '''1212130212121
+        '''1010101110101
+        '''1202021202121
+        '''1011111011101
+        '''1212120212021
+        '''1010101111101
+        '''1312121202121
+        '''1010101010111
+        '''1202120212021
+        '''1111111111111.
+        '''</summary>
+        Friend ReadOnly Property Maze9() As String
+            Get
+                Return ResourceManager.GetString("Maze9", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property pic1() As System.Drawing.Bitmap

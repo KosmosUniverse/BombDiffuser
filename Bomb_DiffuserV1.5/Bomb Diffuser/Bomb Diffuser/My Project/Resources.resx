@@ -199,6 +199,33 @@
   <data name="Gpic9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Gpic9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Maze1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Maze2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Maze3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Maze4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Maze5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Maze6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Maze7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze7.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Maze8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze8.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Maze9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maze9.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="pic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\pic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
