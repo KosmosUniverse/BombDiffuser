@@ -75,11 +75,15 @@ Public Class Maze
         Dim newFirstCircle As Pos
         Dim newSecondCircle As Pos
 
-        newFirstCircle.x = firstCircle.x * 2
-        newFirstCircle.y = firstCircle.y * 2
+        With newFirstCircle
+            .x = firstCircle.x * 2 - 1
+            .y = firstCircle.y * 2 - 1
+        End With
 
-        newSecondCircle.x = secondCircle.x * 2
-        newSecondCircle.y = secondCircle.y * 2
+        With newSecondCircle
+            .x = secondCircle.x * 2 - 1
+            .y = secondCircle.y * 2 - 1
+        End With
 
         If (Maze1(newFirstCircle.y, newFirstCircle.x) = 3 And Maze1(newSecondCircle.y, newSecondCircle.x) = 3) Then
             selectedMaze = Maze1
@@ -107,11 +111,24 @@ Public Class Maze
     End Function
 
     Public Sub searchPath(triangle As Pos, square As Pos, result As TextBox)
+        Dim newTriangle As New Pos
+        Dim newSquare As New Pos
         Dim isGood As Boolean = False
         Dim ret As New List(Of Pos)
         Dim tmpPos As New Pos
-        Goal = triangle
-        Moi = square
+
+        With newTriangle
+            .x = triangle.x * 2 - 1
+            .y = triangle.y * 2 - 1
+        End With
+
+        With newSquare
+            .x = square.x * 2 - 1
+            .y = square.y * 2 - 1
+        End With
+
+        Goal = newTriangle
+        Moi = newSquare
 
         With recurPath(Moi, Moi)
             isGood = .Item1
@@ -119,17 +136,23 @@ Public Class Maze
         End With
 
         If (isGood) Then
+            Dim i As Integer = 0
             tmpPos = Moi
             For Each way In ret
-                If (way.y - 1 = tmpPos.y) Then
+                If Not (i = 0) Then
+                    result.Text += i & " - "
+                End If
+                If (way.y - 2 = tmpPos.y) Then
                     result.Text += "DOWN" & vbNewLine
-                ElseIf (way.x - 1 = tmpPos.x) Then
+                ElseIf (way.x - 2 = tmpPos.x) Then
                     result.Text += "RIGHT" & vbNewLine
-                ElseIf (way.x + 1 = tmpPos.x) Then
+                ElseIf (way.x + 2 = tmpPos.x) Then
                     result.Text += "LEFT" & vbNewLine
-                ElseIf (way.y + 1 = tmpPos.y) Then
+                ElseIf (way.y + 2 = tmpPos.y) Then
                     result.Text += "UP" & vbNewLine
                 End If
+                tmpPos = way
+                i += 1
             Next
         Else
             result.Text = "No good path to reach goal"
@@ -142,13 +165,16 @@ Public Class Maze
         Dim tmp As New List(Of Pos)
         Dim ret As New List(Of Pos)
 
-        If (Not selectedMaze(posCurent.y - 1, posCurent.x) = 1 And Not (posCurent.y - 1 = posParent.y And posCurent.x = posParent.x)) Then
+        If (Not selectedMaze(posCurent.y - 1, posCurent.x) = 1 And Not (posCurent.y - 2 = posParent.y And posCurent.x = posParent.x)) Then
             open.Add(New Pos With {.y = posCurent.y - 2, .x = posCurent.x})
-        ElseIf (Not selectedMaze(posCurent.y, posCurent.x - 1) = 1 And Not (posCurent.y = posParent.y And posCurent.x - 1 = posParent.x)) Then
+        End If
+        If (Not selectedMaze(posCurent.y, posCurent.x - 1) = 1 And Not (posCurent.y = posParent.y And posCurent.x - 2 = posParent.x)) Then
             open.Add(New Pos With {.y = posCurent.y, .x = posCurent.x - 2})
-        ElseIf (Not selectedMaze(posCurent.y, posCurent.x + 1) = 1 And Not (posCurent.y = posParent.y And posCurent.x + 1 = posParent.x)) Then
+        End If
+        If (Not selectedMaze(posCurent.y, posCurent.x + 1) = 1 And Not (posCurent.y = posParent.y And posCurent.x + 2 = posParent.x)) Then
             open.Add(New Pos With {.y = posCurent.y, .x = posCurent.x + 2})
-        ElseIf (Not selectedMaze(posCurent.y + 1, posCurent.x) = 1 And Not (posCurent.y + 1 = posParent.y And posCurent.x = posParent.x)) Then
+        End If
+        If (Not selectedMaze(posCurent.y + 1, posCurent.x) = 1 And Not (posCurent.y + 2 = posParent.y And posCurent.x = posParent.x)) Then
             open.Add(New Pos With {.y = posCurent.y + 2, .x = posCurent.x})
         End If
 
@@ -175,5 +201,6 @@ Public Class Maze
                 Return (Tuple.Create(True, ret))
             End If
         Next
+        Return (Tuple.Create(False, open))
     End Function
 End Class

@@ -36,6 +36,7 @@
         GBhoriz.Enabled = True
         GBsimon.Enabled = True
         GBsymbol.Enabled = True
+        GBMaze.Enabled = True
 
         For i As Integer = 0 To 26
             pics.Add(False)
@@ -833,13 +834,13 @@
             TBysquare.Enabled = True
             TBxtriangle.Enabled = True
             TBytriangle.Enabled = True
-            BSearchMaze.Enabled = True
+            BPath.Enabled = True
         Else
             TBxsquare.Enabled = False
             TBysquare.Enabled = False
             TBxtriangle.Enabled = False
             TBytriangle.Enabled = False
-            BSearchMaze.Enabled = False
+            BPath.Enabled = False
             MsgBox("[ERROR]: Cannot find your maze, please verify circle coordonates.", vbOKOnly + vbObjectError, "Error")
             Return
         End If
@@ -881,6 +882,6 @@
         TBysquare.Enabled = False
         TBxtriangle.Enabled = False
         TBytriangle.Enabled = False
-        BSearchMaze.Enabled = False
+        BPath.Enabled = False
     End Sub
 End Class

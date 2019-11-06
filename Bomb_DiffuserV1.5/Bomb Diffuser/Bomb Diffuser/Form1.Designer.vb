@@ -189,7 +189,7 @@ Partial Class Form1
         Me.PB8 = New System.Windows.Forms.PictureBox()
         Me.PB9 = New System.Windows.Forms.PictureBox()
         Me.PB1 = New System.Windows.Forms.PictureBox()
-        Me.GMaze = New System.Windows.Forms.GroupBox()
+        Me.GBMaze = New System.Windows.Forms.GroupBox()
         Me.TBPath = New System.Windows.Forms.TextBox()
         Me.BresetMaze = New System.Windows.Forms.Button()
         Me.BPath = New System.Windows.Forms.Button()
@@ -263,7 +263,7 @@ Partial Class Form1
         CType(Me.PB8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GMaze.SuspendLayout()
+        Me.GBMaze.SuspendLayout()
         Me.SuspendLayout()
         '
         'GBgen
@@ -2009,37 +2009,38 @@ Partial Class Form1
         Me.PB1.TabIndex = 0
         Me.PB1.TabStop = False
         '
-        'GMaze
+        'GBMaze
         '
-        Me.GMaze.BackColor = System.Drawing.Color.PeachPuff
-        Me.GMaze.Controls.Add(Me.TBPath)
-        Me.GMaze.Controls.Add(Me.BresetMaze)
-        Me.GMaze.Controls.Add(Me.BPath)
-        Me.GMaze.Controls.Add(Me.BSearchMaze)
-        Me.GMaze.Controls.Add(Me.Label10)
-        Me.GMaze.Controls.Add(Me.Label9)
-        Me.GMaze.Controls.Add(Me.Label7)
-        Me.GMaze.Controls.Add(Me.Label8)
-        Me.GMaze.Controls.Add(Me.Label5)
-        Me.GMaze.Controls.Add(Me.Label6)
-        Me.GMaze.Controls.Add(Me.Label3)
-        Me.GMaze.Controls.Add(Me.Label4)
-        Me.GMaze.Controls.Add(Me.Label2)
-        Me.GMaze.Controls.Add(Me.Label1)
-        Me.GMaze.Controls.Add(Me.TBytriangle)
-        Me.GMaze.Controls.Add(Me.TBxtriangle)
-        Me.GMaze.Controls.Add(Me.TBysquare)
-        Me.GMaze.Controls.Add(Me.TBxsquare)
-        Me.GMaze.Controls.Add(Me.TBycircle2)
-        Me.GMaze.Controls.Add(Me.TBxcircle2)
-        Me.GMaze.Controls.Add(Me.TBycircle1)
-        Me.GMaze.Controls.Add(Me.TBxcricle1)
-        Me.GMaze.Location = New System.Drawing.Point(712, 12)
-        Me.GMaze.Name = "GMaze"
-        Me.GMaze.Size = New System.Drawing.Size(329, 385)
-        Me.GMaze.TabIndex = 19
-        Me.GMaze.TabStop = False
-        Me.GMaze.Text = "Maze"
+        Me.GBMaze.BackColor = System.Drawing.Color.PeachPuff
+        Me.GBMaze.Controls.Add(Me.TBPath)
+        Me.GBMaze.Controls.Add(Me.BresetMaze)
+        Me.GBMaze.Controls.Add(Me.BPath)
+        Me.GBMaze.Controls.Add(Me.BSearchMaze)
+        Me.GBMaze.Controls.Add(Me.Label10)
+        Me.GBMaze.Controls.Add(Me.Label9)
+        Me.GBMaze.Controls.Add(Me.Label7)
+        Me.GBMaze.Controls.Add(Me.Label8)
+        Me.GBMaze.Controls.Add(Me.Label5)
+        Me.GBMaze.Controls.Add(Me.Label6)
+        Me.GBMaze.Controls.Add(Me.Label3)
+        Me.GBMaze.Controls.Add(Me.Label4)
+        Me.GBMaze.Controls.Add(Me.Label2)
+        Me.GBMaze.Controls.Add(Me.Label1)
+        Me.GBMaze.Controls.Add(Me.TBytriangle)
+        Me.GBMaze.Controls.Add(Me.TBxtriangle)
+        Me.GBMaze.Controls.Add(Me.TBysquare)
+        Me.GBMaze.Controls.Add(Me.TBxsquare)
+        Me.GBMaze.Controls.Add(Me.TBycircle2)
+        Me.GBMaze.Controls.Add(Me.TBxcircle2)
+        Me.GBMaze.Controls.Add(Me.TBycircle1)
+        Me.GBMaze.Controls.Add(Me.TBxcricle1)
+        Me.GBMaze.Enabled = False
+        Me.GBMaze.Location = New System.Drawing.Point(712, 12)
+        Me.GBMaze.Name = "GBMaze"
+        Me.GBMaze.Size = New System.Drawing.Size(329, 385)
+        Me.GBMaze.TabIndex = 19
+        Me.GBMaze.TabStop = False
+        Me.GBMaze.Text = "Maze"
         '
         'TBPath
         '
@@ -2047,6 +2048,7 @@ Partial Class Form1
         Me.TBPath.Multiline = True
         Me.TBPath.Name = "TBPath"
         Me.TBPath.ReadOnly = True
+        Me.TBPath.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TBPath.Size = New System.Drawing.Size(109, 277)
         Me.TBPath.TabIndex = 21
         '
@@ -2233,7 +2235,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1053, 537)
-        Me.Controls.Add(Me.GMaze)
+        Me.Controls.Add(Me.GBMaze)
         Me.Controls.Add(Me.GBsymbol)
         Me.Controls.Add(Me.GBsimon)
         Me.Controls.Add(Me.GBhoriz)
@@ -2319,8 +2321,8 @@ Partial Class Form1
         CType(Me.PB8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GMaze.ResumeLayout(False)
-        Me.GMaze.PerformLayout()
+        Me.GBMaze.ResumeLayout(False)
+        Me.GBMaze.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2492,7 +2494,7 @@ Partial Class Form1
     Friend WithEvents GBresult As GroupBox
     Friend WithEvents BresetMors As Button
     Friend WithEvents BresetPass As Button
-    Friend WithEvents GMaze As GroupBox
+    Friend WithEvents GBMaze As GroupBox
     Friend WithEvents TBysquare As TextBox
     Friend WithEvents TBxsquare As TextBox
     Friend WithEvents TBycircle2 As TextBox
