@@ -813,6 +813,7 @@
         ElseIf (Integer.Parse(str) > 6 Or Integer.Parse(str) < 1) Then
             Return False
         End If
+        Return True
     End Function
 
     Private Sub BSearchMaze_Click(sender As Object, e As EventArgs) Handles BSearchMaze.Click

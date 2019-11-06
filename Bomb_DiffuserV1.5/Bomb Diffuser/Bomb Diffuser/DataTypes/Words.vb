@@ -90,6 +90,7 @@
             Return "Bottom Right"
         Else
             MsgBox("[ERROR]: The word you entered doesn't exist.", vbOKOnly + vbObjectError, "Error")
+            Return "Null"
         End If
     End Function
 
