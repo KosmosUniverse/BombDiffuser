@@ -27,3 +27,7 @@ It handles all basic modules:
 This software doesn't solve the bomb for you !
 It's just a help tool for the person who have the manual.
 So it doesn't break the game.
+
+## Authors
+- **Thomas Ducret** - Main Developer
+- **Vincent Vuong** - Bug and idea finder
