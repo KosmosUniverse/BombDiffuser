@@ -187,39 +187,63 @@
         End If
     End Sub
 
-    Private Sub Bsearch_Click(sender As Object, e As EventArgs) Handles Bsearch2.Click
+    Private Sub Bsearch_Click(sender As Object, e As EventArgs) Handles Bsearch1.Click
         TBinput2.Text = ""
         TBlist.Text = ""
+
         If Not (TBinput.Text.Length = 0) Then
-            TBresult8.Text = words.getPosition(TBinput.Text)
-            Return
+            Dim isGood As Boolean
+            Dim str As String
+            With words.getPosition(TBinput.Text)
+                isGood = .Item1
+                str = .Item2
+            End With
+
+            If (isGood) Then
+                TBresult8.Text = str
+            Else
+                TBresult8.Text = "No position found."
+            End If
+        Else
+            MsgBox("[ERROR]: you forgot to fulfill the above field", vbOKOnly + vbObjectError, "Error")
         End If
-        MsgBox("[ERROR]: you forgot to fulfill the above field", vbOKOnly + vbObjectError, "Error")
     End Sub
 
     Private Sub TBinput_Enter(sender As Object, e As KeyEventArgs) Handles TBinput.KeyDown
         If (e.KeyCode = Keys.Enter) Then
-            Bsearch2.PerformClick()
+            Bsearch1.PerformClick()
         End If
     End Sub
 
-    Private Sub Bsearch2_Click(sender As Object, e As KeyEventArgs) Handles Bsearch1.Click
+    Private Sub Bsearch2_Click(sender As Object, e As EventArgs) Handles Bsearch2.Click
         TBinput.Text = ""
         If (TBinput2.Text.Length = 0) Then
             MsgBox("[ERROR]: you forgot to fulfill the above field", vbOKOnly + vbObjectError, "Error")
             Return
         End If
-        Dim tmp As String = words.getList(TBinput2.Text)
-        Dim tab As String() = tmp.Split(", ")
 
-        TBlist.Text = ""
+        Dim tmp As String
+        Dim isGood As Boolean
 
-        For Each word In tab
-            TBlist.Text += word + vbNewLine
-        Next
+        With words.getList(TBinput2.Text)
+            isGood = .Item1
+            tmp = .Item2
+        End With
+
+        If (isGood) Then
+            Dim tab As String() = tmp.Split(", ")
+
+            TBlist.Text = ""
+
+            For Each word In tab
+                TBlist.Text += word + vbNewLine
+            Next
+        Else
+            TBlist.Text = "No list found, please retry with a good word."
+        End If
     End Sub
 
-    Private Sub TBinput2_Enter(sender As Object, e As KeyEventArgs) Handles TBinput.KeyDown
+    Private Sub TBinput2_Enter(sender As Object, e As KeyEventArgs) Handles TBinput2.KeyDown
         If (e.KeyCode = Keys.Enter) Then
             Bsearch2.PerformClick()
         End If
@@ -243,7 +267,7 @@
         TBlab.Text = ""
         TBpos.Text = ""
 
-        If (Not TBnum.Text.Length = 0) Then
+        If (Not TBnum.Text.Length = 0 And Not TBnum.Text.Contains(" ")) Then
             numCheck = Integer.Parse(TBnum.Text)
             If Not (numCheck <= 4 And numCheck >= 1) Then
                 TBlab.Text = ""

@@ -75,26 +75,36 @@
         BR.Add("cee")
     End Sub
 
-    Public Function getPosition(word As String) As String
+    Public Function getPosition(word As String) As Tuple(Of Boolean, String)
+        Dim str As String
+        Dim isGood As Boolean = True
+
         If (TL.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
-            Return "Top Left"
+            str = "Top Left"
         ElseIf (TR.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
-            Return "Top Right"
+            str = "Top Right"
         ElseIf (ML.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
-            Return "Middle Left"
+            str = "Middle Left"
         ElseIf (MR.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
-            Return "Middle Right"
+            str = "Middle Right"
         ElseIf (BL.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
-            Return "Bottom Left"
+            str = "Bottom Left"
         ElseIf (BR.Contains(word, StringComparer.OrdinalIgnoreCase)) Then
-            Return "Bottom Right"
+            str = "Bottom Right"
         Else
             MsgBox("[ERROR]: The word you entered doesn't exist.", vbOKOnly + vbObjectError, "Error")
-            Return "Null"
+            str = "Null"
+            isGood = False
         End If
+
+        Return (Tuple.Create(isGood, str))
     End Function
 
-    Public Function getList(word As String) As String
-        Return (dic(word.ToLower))
+    Public Function getList(word As String) As Tuple(Of Boolean, String)
+        If Not (dic.Keys.Contains(word.ToLower())) Then
+            Return (Tuple.Create(False, "Null"))
+        End If
+
+        Return (Tuple.Create(True, dic(word.ToLower)))
     End Function
 End Class
