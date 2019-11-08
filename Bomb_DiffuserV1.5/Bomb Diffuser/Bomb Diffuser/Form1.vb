@@ -809,16 +809,17 @@
 
     Private Function checkInput(str As String) As Boolean
         If (str.Length = 0) Then
-            Return False
+            MsgBox("[ERROR]: You forgot to fulfill one or more of the 4 field above.", vbOKOnly + vbObjectError, "Error")
+            Return True
         ElseIf (Integer.Parse(str) > 6 Or Integer.Parse(str) < 1) Then
-            Return False
+            MsgBox("[ERROR]: The value youn entered in one of the above field is not between 1 and 6 included.", vbOKOnly + vbObjectError, "Error")
+            Return True
         End If
-        Return True
+        Return False
     End Function
 
     Private Sub BSearchMaze_Click(sender As Object, e As EventArgs) Handles BSearchMaze.Click
         If (checkInput(TBxcricle1.Text) Or checkInput(TBycircle1.Text) Or checkInput(TBxcircle2.Text) Or checkInput(TBycircle2.Text)) Then
-            MsgBox("[ERROR]: You forgot to fulfill one or more of the 4 field above.", vbOKOnly + vbObjectError, "Error")
             Return
         End If
 
@@ -854,7 +855,6 @@
 
     Private Sub BPath_Click(sender As Object, e As EventArgs) Handles BPath.Click
         If (checkInput(TBxtriangle.Text) Or checkInput(TBytriangle.Text) Or checkInput(TBxsquare.Text) Or checkInput(TBysquare.Text)) Then
-            MsgBox("[ERROR]: You forgot to fulfill one or more of the 4 field before.", vbOKOnly + vbObjectError, "Error")
             Return
         End If
 
