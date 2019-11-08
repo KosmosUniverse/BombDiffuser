@@ -28,7 +28,7 @@
         Dim tmp As Integer
         Dim numCheck As Integer
 
-        If (Not TBcurNum.Text.Length = 0) Then
+        If (Not TBcurNum.Text.Length = 0 And Not TBcurNum.Text.Contains(" ")) Then
             If (TBprevPos.Text.Length = 0 Or TBprevLab.Text.Length = 0) Then
                 MsgBox("[ERROR]: you forgot to fulfill one of the previous field (position or label)", vbOKOnly + vbObjectError, "Error")
                 TBcurNum.Text = ""

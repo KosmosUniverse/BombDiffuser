@@ -97,7 +97,6 @@
     <Compile Include="DataTypes\Pass.vb" />
     <Compile Include="DataTypes\Simon.vb" />
     <Compile Include="DataTypes\Symbols.vb" />
-    <Compile Include="DataTypes\Tree.vb" />
     <Compile Include="DataTypes\Words.vb" />
     <Compile Include="DataTypes\SeqWire.vb" />
     <Compile Include="Form1.vb">
@@ -321,7 +320,6 @@
     <None Include="Images\Gpic27.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BombDiffuserLogo.png" />
     <None Include="Resources\BombDiffuserLogo.ico" />
     <Content Include="Resources\Maze1.txt" />
     <Content Include="Resources\Maze2.txt" />
